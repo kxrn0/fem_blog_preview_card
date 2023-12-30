@@ -1,0 +1,100 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@supports (font-variation-settings: normal) {
+  @font-face {
+    font-family: fighter;
+    src: url("./assets/fonts/Figtree-VariableFont_wght.ttf");
+    font-weight: 100 1000;
+  }
+}
+
+@supports not (font-variation-settings: normal) {
+  @font-face {
+    font-family: fighter;
+    src: url("./assets/fonts/static/Figtree-SemiBold.ttf");
+    font-weight: 500;
+  }
+
+  @font-face {
+    font-family: fighter;
+    src: url("./assets/fonts/static/Figtree-ExtraBold.ttf");
+    font-weight: 800;
+  }
+}
+
+:root {
+  --primary-yellow: hsl(47, 88%, 63%);
+  --neutral-white: hsl(0, 0%, 100%);
+  --neutral-gray: hsl(0, 0%, 50%);
+  --neutral-black: hsl(0, 0%, 7%);
+  --duration: 0.33s;
+}
+
+body {
+  background-color: var(--primary-yellow);
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.fs-h2,
+.fs-body-1,
+.fs-body-2,
+.fs-body-3 {
+  font-family: fighter;
+}
+
+.fs-body-2,
+.fs-body-3 {
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.fs-h2 {
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 36px;
+}
+
+.fs-body-1 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.fs-body-2 {
+  font-weight: 800;
+}
+
+.fs-body-3 {
+  font-weight: 500;
+}
+
+.gap-12 {
+  display: flex;
+  gap: 12px;
+}
+
+.gap-24 {
+  display: flex;
+  gap: 24px;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  align-items: center;
+}
+
+.p-24 {
+  padding: 24px;
+}
